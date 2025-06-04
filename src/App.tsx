@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import LiquidChrome from './blocks/Backgrounds/LiquidChrome/LiquidChrome'
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button'
+
+
+const mission: string = "Mission"
+const startCardTitle: string = "Filter the water"
+const startCardDescription: string = "There is water that needs to be filtered."
+const startCardButton: string = "Begin"
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	return (
+		<>
+			<div className='background'>
+				<div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+					<LiquidChrome
+						baseColor={[0.44, 0.4, 0.29]}
+						speed={0.3}
+						amplitude={0.6}
+						interactive={true}
+					/>
+				</div>
+			</div>
+
+			<section className='mission'>
+				<div className='card'>
+					<Card.Header>{mission}</Card.Header>
+					<Card.Body>
+						<Card.Title>{startCardTitle}</Card.Title>
+						<Card.Text>
+							{startCardDescription}
+						</Card.Text>
+						<Button variant="primary">{startCardButton}</Button>
+					</Card.Body>
+				</div>
+			</section>
+
+
+
+		</>
+	)
 }
 
 export default App
