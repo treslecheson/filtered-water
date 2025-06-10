@@ -19,7 +19,36 @@
   align-items: center; 
 }
 
+.end-card {
+	background-color: #303030;
+	color: white;
+	padding: 5%;
+	border-radius: 20px;
+}
+
 .card {
 	background-color: #303030;
+	color: white;
+	width: 40%;
+	border-radius: 20px;
+
+}
+
+.checklist-card {
+	display: flex;
+	flex-direction: column;
+	margin: 1em;
+}
+
+.checklist-card button {
+	margin-top: 1.5em;
+}
+
+.checklist-card label {
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+.water-text {
 	color: white;
 }
